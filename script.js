@@ -45,12 +45,12 @@ const customCursorImg = customCursor ? customCursor.querySelector("img") : null;
 const resumeMFrame = document.querySelector(".resume-preview-frame");
 const resumeMFrameWrap = document.querySelector(".resume-preview-frame-wrap");
 
-const defaultCursorSrc = "assets/images/UI_TravelBook_Cursor01c.png";
+const defaultCursorSrc = "Assets/images/UI_TravelBook_Cursor01c.png";
 const clickFrames = [
-    "assets/images/UI_TravelBook_MouseCursorClick01a_1.png",
-    "assets/images/UI_TravelBook_MouseCursorClick01a_2.png",
-    "assets/images/UI_TravelBook_MouseCursorClick01a_3.png",
-    "assets/images/UI_TravelBook_MouseCursorClick01a_4.png"
+    "Assets/images/UI_TravelBook_MouseCursorClick01a_1.png",
+    "Assets/images/UI_TravelBook_MouseCursorClick01a_2.png",
+    "Assets/images/UI_TravelBook_MouseCursorClick01a_3.png",
+    "Assets/images/UI_TravelBook_MouseCursorClick01a_4.png"
 ];
 
 let cursorFrameTimeouts = [];

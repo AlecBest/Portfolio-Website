@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'TravelBookFont';
-    src: url('assets/fonts/Anxel.ttf') format('truetype');
+    src: url('Assets/fonts/Anxel.ttf') format('truetype');
 }
 
 :root {
@@ -167,7 +167,7 @@ body.disable-custom-cursor #custom-cursor {
     height: 86px;
     margin: 0 auto 28px;
     padding: 0 26px;
-    background-image: url('assets/images/UI_TravelBook_Banner01a.png');
+    background-image: url('Assets/images/UI_TravelBook_Banner01a.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -222,7 +222,7 @@ body.disable-custom-cursor #custom-cursor {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-image: url('assets/images/UI_TravelBook_Frame01a.png');
+    background-image: url('Assets/images/UI_TravelBook_Frame01a.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     color: var(--paper-text-strong);
@@ -234,12 +234,12 @@ body.disable-custom-cursor #custom-cursor {
 .top-tab:hover,
 .top-tab:focus-visible {
     transform: translateY(2px);
-    background-image: url('assets/images/UI_TravelBook_Frame02a.png');
+    background-image: url('Assets/images/UI_TravelBook_Frame02a.png');
 }
 
 .top-tab.active {
     transform: translateY(0);
-    background-image: url('assets/images/UI_TravelBook_FrameSelect01a.png');
+    background-image: url('Assets/images/UI_TravelBook_FrameSelect01a.png');
 }
 
 .top-tab img {
@@ -260,7 +260,7 @@ body.disable-custom-cursor #custom-cursor {
     min-height: calc(var(--page-height) + (var(--cover-border) * 2));
     border-style: solid;
     border-width: var(--cover-border);
-    border-image-source: url('assets/images/UI_TravelBook_BookCover01a.png');
+    border-image-source: url('Assets/images/UI_TravelBook_BookCover01a.png');
     border-image-slice: 64;
     border-image-repeat: round;
     display: flex;
@@ -290,13 +290,13 @@ body.disable-custom-cursor #custom-cursor {
 }
 
 .left-page {
-    background-image: url('assets/images/UI_TravelBook_BookPageLeft01a.png');
+    background-image: url('Assets/images/UI_TravelBook_BookPageLeft01a.png');
     margin-top: -8px;
     margin-bottom: -6px;
 }
 
 .right-page {
-    background-image: url('assets/images/UI_TravelBook_BookPageRight01a.png');
+    background-image: url('Assets/images/UI_TravelBook_BookPageRight01a.png');
     margin-top: -8px;
     margin-bottom: -6px;
 }
@@ -487,18 +487,18 @@ body.disable-custom-cursor #custom-cursor {
 }
 
 .inventory-slot.filled {
-    background-image: url('assets/images/UI_TravelBook_Slot01a.png');
+    background-image: url('Assets/images/UI_TravelBook_Slot01a.png');
 }
 
 .inventory-slot.filled:hover,
 .inventory-slot.filled:focus-visible {
-    background-image: url('assets/images/UI_TravelBook_Slot01b.png');
+    background-image: url('Assets/images/UI_TravelBook_Slot01b.png');
     transform: translateY(-2px);
     filter: brightness(1.04);
 }
 
 .inventory-slot.empty {
-    background-image: url('assets/images/UI_TravelBook_Slot01c.png');
+    background-image: url('Assets/images/UI_TravelBook_Slot01c.png');
     opacity: 0.95;
 }
 
@@ -601,7 +601,7 @@ body.disable-custom-cursor #custom-cursor {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-image: url('assets/images/UI_TravelBook_Frame02a.png');
+    background-image: url('Assets/images/UI_TravelBook_Frame02a.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     color: var(--paper-text);
@@ -617,7 +617,7 @@ body.disable-custom-cursor #custom-cursor {
 .rpg-btn:hover,
 .rpg-btn:focus-visible {
     transform: translateY(-2px);
-    background-image: url('assets/images/UI_TravelBook_FrameSelect01a.png');
+    background-image: url('Assets/images/UI_TravelBook_FrameSelect01a.png');
     filter: drop-shadow(0 7px 0 rgba(66, 45, 31, 0.34));
 }
 
@@ -638,7 +638,7 @@ body.disable-custom-cursor #custom-cursor {
     min-height: 300px;
     padding: 22px 24px 20px;
     border: 16px solid transparent;
-    border-image-source: url('assets/images/UI_TravelBook_Popup02a.png');
+    border-image-source: url('Assets/images/UI_TravelBook_Popup02a.png');
     border-image-slice: 8 fill;
     border-image-width: 16px;
     border-image-repeat: stretch;
@@ -848,7 +848,7 @@ body.disable-custom-cursor #custom-cursor {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-image: url('assets/images/UI_TravelBook_Frame02a.png');
+    background-image: url('Assets/images/UI_TravelBook_Frame02a.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: transform 0.16s ease, background-image 0.16s ease;
@@ -857,7 +857,7 @@ body.disable-custom-cursor #custom-cursor {
 .project-nav-btn:hover,
 .project-nav-btn:focus-visible {
     transform: translateY(-2px);
-    background-image: url('assets/images/UI_TravelBook_FrameSelect01a.png');
+    background-image: url('Assets/images/UI_TravelBook_FrameSelect01a.png');
 }
 
 .project-nav-btn img {
