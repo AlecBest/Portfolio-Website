@@ -1,62 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alec Best | Resume</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alec Best | Resume</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    
-    <header>
-    <div class="logo">
-      <h1>Alec Best</h1>
-      <p>Aspiring Software Developer</p>
-    </div>
+    <main id="character-sheet">
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-    <div class="taskbar-right">
-        <button class="taskbar-app active" id="taskbarApp">📁<span style="margin-left: 10px;">Resume.exe</span></button> 
-    </div>
-    </header>
+        <div class="journal-nameplate">
+            <span>Alec Best</span>
+        </div>
 
-    <main>
-        <div class="title-bar">
-            <div class="title-text">Resume.exe</div>
-            <div class="title-buttons">
-                <button class="win-btn minimize">_</button>
-                <button class="win-btn maximize">□</button>
-                <button class="win-btn close">×</button>
+        <div class="book-layout-wrapper">
+            <div class="book-stage">
+
+                <nav class="book-top-tabs">
+                    <a class="top-tab" href="index.html">
+                        <img src="assets/images/UI_TravelBook_ButtonAbout01a.png" alt="" />
+                        <span>Profile</span>
+                    </a>
+
+                    <a class="top-tab" href="projects.html">
+                        <img src="assets/images/UI_TravelBook_IconJournal01b.png" alt="" />
+                        <span>Projects</span>
+                    </a>
+
+                    <a class="top-tab active" href="resume.html">
+                        <img src="assets/images/UI_TravelBook_ButtonManual01a.png" alt="" />
+                        <span>Resume</span>
+                    </a>
+
+                    <a class="top-tab" href="contact.html">
+                        <img src="assets/images/UI_TravelBook_ButtonContact01a.png" alt="" />
+                        <span>Contact</span>
+                    </a>
+                </nav>
+
+                <section class="book-cover">
+                    <div class="book-pages-wrapper">
+
+                        <section class="book-page left-page resume-book-page">
+
+                            <section class="resume-section-card">
+                                <h2>Resume Overview</h2>
+                                <p>
+                                    This page contains a preview of my current resume along with a quick summary of my background, technical focus, and the kind of work I’m aiming to grow into.
+                                </p>
+                            </section>
+
+                            <section class="resume-section-card">
+                                <h3>Education</h3>
+                                <div class="resume-meta-list">
+                                    <div class="resume-meta-row">
+                                        <span class="resume-meta-label">School</span>
+                                        <span class="resume-meta-value">Western University</span>
+                                    </div>
+
+                                    <div class="resume-meta-row">
+                                        <span class="resume-meta-label">Program</span>
+                                        <span class="resume-meta-value">Honors Specialization in Computer Science</span>
+                                    </div>
+
+                                    <div class="resume-meta-row">
+                                        <span class="resume-meta-label">Minor</span>
+                                        <span class="resume-meta-value">Game Development</span>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="resume-section-card">
+                                <h3>Technical Areas</h3>
+                                <ul class="resume-chip-list">
+                                    <li>Java</li>
+                                    <li>Python</li>
+                                    <li>C++</li>
+                                    <li>JavaScript</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Git</li>
+                                    <li>Frontend Development</li>
+                                    <li>Game Development</li>
+                                    <li>UI Design</li>
+                                </ul>
+                            </section>
+
+                            <section class="resume-section-card">
+                                <h3>Strengths</h3>
+                                <ul class="resume-highlight-list">
+                                    <li>Collaborative group project experience</li>
+                                    <li>Strong interest in software and game development</li>
+                                    <li>Comfortable learning through hands-on building</li>
+                                    <li>Focused on creating polished, engaging projects</li>
+                                </ul>
+                            </section>
+
+                        </section>
+
+                        <section class="book-page right-page resume-book-page">
+
+                            <section class="resume-preview-card">
+                                <div class="resume-preview-header">
+                                    <h3>Resume Preview</h3>
+                                    <div class="resume-preview-actions-inline">
+                                        <a href="AlecOBest-Resume2026.pdf" target="_blank" rel="noopener noreferrer" class="mini-action-btn">Open</a>
+                                        <a href="AlecOBest-Resume2026.pdf" download="AlecOBest-Resume2026.pdf" class="mini-action-btn">Download</a>
+                                    </div>
+                                </div>
+
+                                <div class="resume-preview-frame-wrap">
+                                    <iframe
+                                        class="resume-preview-frame"
+                                        src="AlecOBest-Resume2026.pdf#view=FitH"
+                                        title="Resume PDF Preview">
+                                    </iframe>
+                                </div>
+                            </section>
+
+                        </section>
+
+                    </div>
+                </section>
+
+                <aside class="planned-projects-panel resume-side-panel">
+                    <h3>Resume Actions</h3>
+
+                    <div class="resume-side-actions">
+                        <a href="AlecOBest-Resume2026.pdf" target="_blank" rel="noopener noreferrer" class="resume-side-link">
+                            Open Resume PDF
+                        </a>
+
+                        <a href="AlecOBest-Resume2026.pdf" download="AlecOBest-Resume2026.pdf" class="resume-side-link">
+                            Download Resume
+                        </a>
+
+                        <a href="projects.html" class="resume-side-link">
+                            View Projects
+                        </a>
+
+                        <a href="contact.html" class="resume-side-link">
+                            Contact Me
+                        </a>
+                    </div>
+                </aside>
+
             </div>
         </div>
-        <h1>Resume</h1>
-        <div class="resume-container">
-            <iframe
-                src="AlecOBest-Resume2026.pdf"
-                title="Alec Best Resume" frameborder="0">
-            </iframe>
-            <div class="resume-buttons">
-                <a href="AlecOBest-Resume2026.pdf" target="_blank" class="os-btn">Open Resume PDF in New Tab</a>   
-                <a href="AlecOBest-Resume2026.pdf" download="AlecOBest-Resume2026.pdf" class="os-btn"> Download Resume PDF </a>
-            </div>
-        </div>
+
+        <section class="action-buttons">
+            <a href="index.html" class="rpg-btn">
+                <span>Back to Profile</span>
+            </a>
+
+            <a href="projects.html" class="rpg-btn">
+                <span>View Projects</span>
+            </a>
+
+            <a href="AlecOBest-Resume2026.pdf" target="_blank" rel="noopener noreferrer" class="rpg-btn">
+                <span>Open Resume</span>
+            </a>
+
+            <a href="contact.html" class="rpg-btn">
+                <span>Contact</span>
+            </a>
+        </section>
+
     </main>
-    
-    <footer>
-        <p>© 2026 Alec Best</p>
-    </footer>
+
+    <div class="popup-overlay hidden" id="popup-overlay"></div>
+
+    <div id="custom-cursor" aria-hidden="true">
+        <img src="assets/images/UI_TravelBook_Cursor01c.png" alt="" />
+    </div>
 
     <script src="script.js"></script>
 </body>

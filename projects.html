@@ -1,105 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alec Best | Projects</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alec Best | Projects</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+    <main id="character-sheet">
 
-    <header>
-    <div class="logo">
-      <h1>Alec Best</h1>
-      <p>Aspiring Software Developer</p>
-    </div>
+        <div class="journal-nameplate">
+            <span>Alec Best</span>
+        </div>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-    <div class="taskbar-right">
-        <button class="taskbar-app active" id="taskbarApp">📁<span style="margin-left: 10px;">Projects.exe</span></button> 
-    </div>
-    </header>
+        <div class="book-layout-wrapper">
+            <div class="book-stage">
 
-    <main>
-        <div class="title-bar">
-            <div class="title-text">Projects.exe</div>
-            <div class="title-buttons">
-                <button class="win-btn minimize">_</button>
-                <button class="win-btn maximize">□</button>
-                <button class="win-btn close">×</button>
+                <nav class="book-top-tabs">
+                    <a class="top-tab" href="index.html">
+                        <img src="assets/images/UI_TravelBook_ButtonAbout01a.png" alt="" />
+                        <span>Profile</span>
+                    </a>
+
+                    <a class="top-tab active" href="projects.html">
+                        <img src="assets/images/UI_TravelBook_IconJournal01b.png" alt="" />
+                        <span>Projects</span>
+                    </a>
+
+                    <a class="top-tab" href="resume.html">
+                        <img src="assets/images/UI_TravelBook_ButtonManual01a.png" alt="" />
+                        <span>Resume</span>
+                    </a>
+
+                    <a class="top-tab" href="contact.html">
+                        <img src="assets/images/UI_TravelBook_ButtonContact01a.png" alt="" />
+                        <span>Contact</span>
+                    </a>
+                </nav>
+
+                <section class="book-cover project-book-cover">
+                    <div class="project-spread-stack">
+
+                        <article class="project-spread active" data-project-index="0">
+                            <section class="book-page left-page projects-book-page">
+                                <section class="projects-page-header">
+                                    <h2>Escape Room Game Engine</h2>
+                                    <p>
+                                        A semester-long group software project where we built a 2D point-and-click escape room game engine with scene management, NPC interaction, puzzles, inventory systems, and movement between different game areas.
+                                    </p>
+                                </section>
+
+                                <section class="project-card">
+                                    <div class="project-card-top">
+                                        <h3>Overview</h3>
+                                        <span class="project-status-badge completed">Completed</span>
+                                    </div>
+
+                                    <p class="project-tech"><strong>Tech Stack:</strong> Java, JavaFX, Git</p>
+
+                                    <div class="project-subsection">
+                                        <h4>Project Scope</h4>
+                                        <p>
+                                            This project focused on creating a reusable escape room framework rather than just a single level. The engine supported multiple gameplay systems working together inside one structured project.
+                                        </p>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <h4>Key Features</h4>
+                                        <ul class="project-feature-list">
+                                            <li>Dynamic scene management</li>
+                                            <li>NPC interaction</li>
+                                            <li>Puzzles and inventory systems</li>
+                                            <li>Navigation between areas</li>
+                                            <li>Connected gameplay systems</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </section>
+
+                            <section class="book-page right-page projects-book-page">
+                                <section class="project-card">
+                                    <div class="project-card-top">
+                                        <h3>My Contributions</h3>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <p>
+                                            I implemented much of the core game logic, player movement, user interface functionality, and dynamic scene management. I also helped make sure the different gameplay systems connected properly to support a smooth player experience.
+                                        </p>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <h4>What I Learned</h4>
+                                        <p>
+                                            Through this project, I gained experience in Java, game development, and collaborative software development. I also improved my teamwork, communication, and time management while working with other developers on a shared codebase.
+                                        </p>
+                                    </div>
+                                </section>
+                            </section>
+                        </article>
+
+                        <article class="project-spread" data-project-index="1">
+                            <section class="book-page left-page projects-book-page">
+                                <section class="projects-page-header">
+                                    <h2>2D Platform Game Engine</h2>
+                                    <p>
+                                        A current group project focused on building a 2D platform game engine in C++. The goal is to create a flexible foundation for platformer gameplay with reusable systems and cleaner engine structure.
+                                    </p>
+                                </section>
+
+                                <section class="project-card">
+                                    <div class="project-card-top">
+                                        <h3>Overview</h3>
+                                        <span class="project-status-badge in-progress">In Progress</span>
+                                    </div>
+
+                                    <p class="project-tech"><strong>Tech Stack:</strong> C++, CMake, Git</p>
+
+                                    <div class="project-subsection">
+                                        <h4>Project Scope</h4>
+                                        <p>
+                                            The engine is being built to support platformer gameplay features while keeping systems modular and maintainable for future expansion.
+                                        </p>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <h4>Current Focus</h4>
+                                        <ul class="project-feature-list">
+                                            <li>Reusable engine structure</li>
+                                            <li>Gameplay-side systems</li>
+                                            <li>Platforming logic</li>
+                                            <li>Group integration and testing</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </section>
+
+                            <section class="book-page right-page projects-book-page">
+                                <section class="project-card">
+                                    <div class="project-card-top">
+                                        <h3>My Contributions</h3>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <p>
+                                            I’m contributing to the engine architecture and gameplay-side systems while collaborating with teammates on implementation, testing, and connecting different parts of the project together.
+                                        </p>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <h4>What I’m Learning</h4>
+                                        <p>
+                                            This project is helping me strengthen my C++ skills, understand engine-style development more deeply, and gain more experience working on a larger technical group project.
+                                        </p>
+                                    </div>
+                                </section>
+                            </section>
+                        </article>
+
+                        <article class="project-spread" data-project-index="2">
+                            <section class="book-page left-page projects-book-page">
+                                <section class="projects-page-header">
+                                    <h2>Personal Portfolio Website</h2>
+                                    <p>
+                                        A custom portfolio website built to showcase my skills, projects, and background in a way that reflects both my technical interests and my passion for game development.
+                                    </p>
+                                </section>
+
+                                <section class="project-card">
+                                    <div class="project-card-top">
+                                        <h3>Overview</h3>
+                                        <span class="project-status-badge in-progress">In Progress</span>
+                                    </div>
+
+                                    <p class="project-tech"><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+
+                                    <div class="project-subsection">
+                                        <h4>Project Scope</h4>
+                                        <p>
+                                            Instead of making a plain portfolio, I wanted to build something more memorable, so I designed the site around a pixel-art journal theme while still keeping it recruiter-friendly.
+                                        </p>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <h4>Key Features</h4>
+                                        <ul class="project-feature-list">
+                                            <li>Custom journal-inspired UI</li>
+                                            <li>Responsive layout</li>
+                                            <li>Project showcase structure</li>
+                                            <li>Interactive navigation</li>
+                                            <li>Distinct visual identity</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </section>
+
+                            <section class="book-page right-page projects-book-page">
+                                <section class="project-card">
+                                    <div class="project-card-top">
+                                        <h3>My Contributions</h3>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <p>
+                                            I designed and developed the site from scratch, working on the layout, custom styling, navigation, project organization, and overall presentation. I also built the site to better represent my personality and interests.
+                                        </p>
+                                    </div>
+
+                                    <div class="project-subsection">
+                                        <h4>What I’m Learning</h4>
+                                        <p>
+                                            This project is helping me improve frontend design, responsive development, UI polish, and how I present my work professionally to recruiters and employers.
+                                        </p>
+                                    </div>
+                                </section>
+                            </section>
+                        </article>
+
+                    </div>
+
+                    <div class="project-book-navigation">
+                        <button class="project-nav-btn prev-project" type="button" aria-label="Previous project">
+                        <img src="assets/images/UI_TravelBook_ButtonArrow01a.png" alt="" />
+                        </button>
+
+                        <div class="project-progress-shell" aria-label="Project progress">
+                            <div class="project-progress-fill" id="project-progress-fill"></div>
+                        </div>
+
+                        <button class="project-nav-btn next-project" type="button" aria-label="Next project">
+                        <img src="assets/images/UI_TravelBook_ButtonArrow01a.png" alt="" />
+                        </button>
+                    </div>
+                </section>
+
+                <aside class="planned-projects-panel project-page-panel">
+                    <h3>Build Queue</h3>
+
+                    <ul class="planned-project-list">
+                        <li class="planned-project done">
+                            <span class="project-check">☑</span>
+                            <span>Escape Room Game Engine</span>
+                        </li>
+
+                        <li class="planned-project">
+                            <span class="project-check">☐</span>
+                            <span>2D Platform Game Engine</span>
+                        </li>
+
+                        <li class="planned-project">
+                            <span class="project-check">☐</span>
+                            <span>Portfolio Website Polish</span>
+                        </li>
+
+                        <li class="planned-project">
+                            <span class="project-check">☐</span>
+                            <span>Unity Penguin Picture Book Game</span>
+                        </li>
+                    </ul>
+                </aside>
+
             </div>
         </div>
 
-        <h1>My Projects</h1>
+        <section class="action-buttons">
+            <a href="index.html" class="rpg-btn">
+                <span>Back to Profile</span>
+            </a>
 
-        <section id="completed-projects">
-            <h2>Completed Projects</h2>
-            <article>
-                <h3>Escape Room Game Engine</h3>
-                <p>Tech Stack: Java, JavaFX, Git</p>
-                <h4> Project Overview </h4>
-                <p>A semester-long group software project where we built a 2D point and click escape room game engine. The project included features such as scene management, NPC interaction, puzzles, inventory systems, and navigation between different game areas</p>   
-                <h4>My Contributions</h4>
-                <p>I implemented much of the core game logic, the player movement, user interface functionality, and dynamic scene management. I also worked on making sure the different gameplay systems connected properly and supported a smooth player experience.</p>
-                <h4>What I learned</h4>
-                <p>Through this project, I gained valuable experience in Java, game development, and collaborative software development. I also learned how to communicate effectively with team members, manage project timelines, and work together on a larger codebase with other developers.</p>
-                <h4>Key Features</h4>
-                <ul>
-                    <li>Dynamic scene management</li>
-                    <li>NPC interaction</li>
-                    <li>Puzzles and inventory systems</li>
-                    <li>Navigation between different game areas</li>
-                    <li>JSON data handling</li>
-                </ul>
-            </article>
+            <a href="AlecOBest-Resume2026.pdf" download="AlecOBest-Resume2026.pdf" class="rpg-btn">
+                <span>Download Resume</span>
+            </a>
+
+            <a href="https://github.com/AlecBest" target="_blank" rel="noopener noreferrer" class="rpg-btn">
+                <span>GitHub</span>
+            </a>
+
+            <a href="contact.html" class="rpg-btn">
+                <span>Contact</span>
+            </a>
         </section>
 
-        <section id="ongoing-projects">
-            <h2>Ongoing Projects</h2>
-            <article>
-                <h3>Personal Portfolio Website</h3>
-                <p>Tech Stack: HTML, CSS, JavaScript</p>
-                <p>My personal site built with HTML, CSS, and JavaScript to showcase my projects and skills.</p>
-                <h4> Project Overview </h4>
-                <p>The website serves as a platform to display my work, skills, and contact information. It includes sections for featured projects, an about me section, and a contact form.</p>
-                <h4>My Contributions</h4>
-                <p>I designed and developed the website from scratch, implementing responsive design, interactive elements, and ensuring a smooth user experience.</p>
-                <h4>What I learned</h4>
-                <p>Through this project, I gained valuable experience in web development, responsive design, and user experience. I also learned how to manage a project from concept to completion and how to effectively showcase my work online.</p>
-                <h4>Key Features</h4>
-                <ul>
-                    <li>Responsive design</li>
-                    <li>Interactive elements</li>
-                    <li>Project showcase</li>
-                </ul>
-            </article>
-        </section>
-
-        <section id="planned-projects">
-            <h2>Planned Projects</h2>
-            <article>
-                <p>Tech Stack: Unity, C#</p>
-                <h3>2D Platformer Game</h3>
-                <p>A 2D platformer game built with Unity, featuring multiple levels, enemies, and power-ups.</p>
-            </article>
-        </section>
     </main>
 
-    <footer>
-        <p>© 2026 Alec Best</p>
-    </footer>
+    <div class="popup-overlay hidden" id="popup-overlay"></div>
+
+    <div id="custom-cursor" aria-hidden="true">
+        <img src="assets/images/UI_TravelBook_Cursor01c.png" alt="" />
+    </div>
 
     <script src="script.js"></script>
 </body>
