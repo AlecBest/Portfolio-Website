@@ -1,186 +1,111 @@
-const overlay = document.getElementById("popup-overlay");
-const popupCards = document.querySelectorAll(".popup-card");
-const popupButtons = document.querySelectorAll(".inventory-slot.filled[data-popup]");
-const closeButtons = document.querySelectorAll(".close-popup");
+const overlay = document.getElementById('window-overlay')
+const windows = document.querySelectorAll('.desktop-window')
+const openButtons = document.querySelectorAll('[data-window]')
+const closeButtons = document.querySelectorAll('.window-close')
 
-function closePopups() {
-    overlay.classList.add("hidden");
-    popupCards.forEach(card => card.classList.add("hidden"));
+const clickSound = document.getElementById('click-sound')
+const closeSound = document.getElementById('close-sound')
+
+const themeToggle = document.getElementById('theme-toggle')
+const soundToggle = document.getElementById('sound-toggle')
+const soundToggleLabel = document.getElementById('sound-toggle-label')
+
+const savedTheme = localStorage.getItem('alec-theme')
+const savedSound = localStorage.getItem('alec-sound')
+
+let soundEnabled = savedSound !== 'off'
+
+if (clickSound) {
+    clickSound.playbackRate = 1.5
 }
 
-popupButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const popupId = button.dataset.popup;
-        const targetPopup = document.getElementById(popupId);
+if (closeSound) {
+    closeSound.playbackRate = 1.15
+}
 
-        if (!targetPopup) return;
+if (savedTheme === 'dark' && themeToggle) {
+    document.body.classList.add('dark-mode')
+    themeToggle.setAttribute('aria-pressed', 'true')
+}
 
-        overlay.classList.remove("hidden");
-        popupCards.forEach(card => card.classList.add("hidden"));
-        targetPopup.classList.remove("hidden");
-    });
-});
+if (soundToggle && soundToggleLabel) {
+    soundToggle.setAttribute('aria-pressed', String(!soundEnabled))
+    soundToggleLabel.textContent = soundEnabled ? 'Sound On' : 'Sound Off'
+}
+
+function playSound(audio) {
+    if (!audio || !soundEnabled) return
+    const soundClone = audio.cloneNode()
+    soundClone.playbackRate = audio.playbackRate || 1
+    soundClone.volume = audio.volume ?? 1
+    soundClone.play().catch(() => {})
+}
+
+function closeAllWindows(playCloseSound = true) {
+    if (!overlay) return
+
+    windows.forEach(windowEl => windowEl.classList.add('hidden'))
+    overlay.classList.add('hidden')
+    document.body.classList.remove('no-scroll')
+
+    if (playCloseSound) {
+        playSound(closeSound)
+    }
+}
+
+openButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const target = document.getElementById(button.dataset.window)
+        if (!target || !overlay) return
+
+        windows.forEach(windowEl => windowEl.classList.add('hidden'))
+        target.classList.remove('hidden')
+        overlay.classList.remove('hidden')
+        document.body.classList.add('no-scroll')
+        playSound(clickSound)
+    })
+})
 
 closeButtons.forEach(button => {
-    button.addEventListener("click", closePopups);
-});
+    button.addEventListener('click', () => {
+        closeAllWindows(true)
+    })
+})
 
 if (overlay) {
-    overlay.addEventListener("click", (event) => {
+    overlay.addEventListener('click', event => {
         if (event.target === overlay) {
-            closePopups();
+            closeAllWindows(true)
         }
-    });
+    })
 }
 
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closePopups();
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && overlay && !overlay.classList.contains('hidden')) {
+        closeAllWindows(true)
     }
-});
+})
 
-const customCursor = document.getElementById("custom-cursor");
-const customCursorImg = customCursor ? customCursor.querySelector("img") : null;
+document.querySelectorAll('a.game-btn, .window-open-btn, .inventory-slot.filled').forEach(element => {
+    element.addEventListener('click', () => {
+        playSound(clickSound)
+    })
+})
 
-const resumeMFrame = document.querySelector(".resume-preview-frame");
-const resumeMFrameWrap = document.querySelector(".resume-preview-frame-wrap");
-
-const defaultCursorSrc = "Assets/images/UI_TravelBook_Cursor01c.png";
-const clickFrames = [
-    "Assets/images/UI_TravelBook_MouseCursorClick01a_1.png",
-    "Assets/images/UI_TravelBook_MouseCursorClick01a_2.png",
-    "Assets/images/UI_TravelBook_MouseCursorClick01a_3.png",
-    "Assets/images/UI_TravelBook_MouseCursorClick01a_4.png"
-];
-
-let cursorFrameTimeouts = [];
-
-function clearCursorAnimation() {
-    cursorFrameTimeouts.forEach(timeoutId => clearTimeout(timeoutId));
-    cursorFrameTimeouts = [];
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-mode')
+        themeToggle.setAttribute('aria-pressed', String(isDark))
+        localStorage.setItem('alec-theme', isDark ? 'dark' : 'light')
+        playSound(clickSound)
+    })
 }
 
-function resetCursorToDefault() {
-    if (!customCursorImg) return;
-    customCursorImg.src = defaultCursorSrc;
-}
-
-function playCursorClickAnimation() {
-    if (!customCursorImg) return;
-    if (document.body.classList.contains("disable-custom-cursor")) return;
-
-    clearCursorAnimation();
-
-    clickFrames.forEach((frameSrc, index) => {
-        const timeoutId = setTimeout(() => {
-            customCursorImg.src = frameSrc;
-        }, index * 38);
-
-        cursorFrameTimeouts.push(timeoutId);
-    });
-
-    const resetTimeout = setTimeout(() => {
-        resetCursorToDefault();
-    }, clickFrames.length * 38 + 60);
-
-    cursorFrameTimeouts.push(resetTimeout);
-}
-
-function enableNativeCursorMode() {
-    document.body.classList.add("disable-custom-cursor");
-}
-
-function disableNativeCursorMode() {
-    document.body.classList.remove("disable-custom-cursor");
-    resetCursorToDefault();
-}
-
-if (customCursor && customCursorImg && window.matchMedia("(pointer: fine)").matches) {
-    document.body.classList.add("has-custom-cursor");
-    customCursorImg.src = defaultCursorSrc;
-
-    window.addEventListener("mousemove", (event) => {
-        customCursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
-    });
-
-    window.addEventListener("mousedown", () => {
-        playCursorClickAnimation();
-    });
-
-    window.addEventListener("mouseup", () => {
-        const resetTimeout = setTimeout(() => {
-            resetCursorToDefault();
-        }, 40);
-
-        cursorFrameTimeouts.push(resetTimeout);
-    });
-} else if (customCursor) {
-    customCursor.remove();
-}
-
-if (resumeMFrameWrap) {
-    resumeMFrameWrap.addEventListener("mouseenter", enableNativeCursorMode);
-    resumeMFrameWrap.addEventListener("mouseleave", disableNativeCursorMode);
-}
-
-if (resumeMFrame) {
-    resumeMFrame.addEventListener("mouseenter", enableNativeCursorMode);
-    resumeMFrame.addEventListener("mouseleave", disableNativeCursorMode);
-}
-
-const projectSpreads = document.querySelectorAll(".project-spread");
-const prevProjectButton = document.querySelector(".prev-project");
-const nextProjectButton = document.querySelector(".next-project");
-const projectProgressFill = document.getElementById("project-progress-fill");
-
-if (projectSpreads.length && prevProjectButton && nextProjectButton) {
-    let currentProjectIndex = 0;
-
-    function updateProjectProgress(index) {
-        if (!projectProgressFill) return;
-        const progressPercent = ((index + 1) / projectSpreads.length) * 100;
-        projectProgressFill.style.width = `${progressPercent}%`;
-    }
-
-    function showProject(index) {
-        projectSpreads.forEach((spread, i) => {
-            spread.classList.toggle("active", i === index);
-        });
-
-        currentProjectIndex = index;
-        updateProjectProgress(index);
-    }
-
-    prevProjectButton.addEventListener("click", () => {
-        const newIndex = currentProjectIndex === 0 ? projectSpreads.length - 1 : currentProjectIndex - 1;
-        showProject(newIndex);
-    });
-
-    nextProjectButton.addEventListener("click", () => {
-        const newIndex = currentProjectIndex === projectSpreads.length - 1 ? 0 : currentProjectIndex + 1;
-        showProject(newIndex);
-    });
-
-    showProject(0);
-}
-
-const resumeFrame = document.querySelector(".resume-preview-frame");
-const resumeFrameWrap = document.querySelector(".resume-preview-frame-wrap");
-
-function enableNativeCursorMode() {
-    document.body.classList.add("disable-custom-cursor");
-}
-
-function disableNativeCursorMode() {
-    document.body.classList.remove("disable-custom-cursor");
-}
-
-if (resumeFrameWrap) {
-    resumeFrameWrap.addEventListener("mouseenter", enableNativeCursorMode);
-    resumeFrameWrap.addEventListener("mouseleave", disableNativeCursorMode);
-}
-
-if (resumeFrame) {
-    resumeFrame.addEventListener("mouseenter", enableNativeCursorMode);
-    resumeFrame.addEventListener("mouseleave", disableNativeCursorMode);
+if (soundToggle && soundToggleLabel) {
+    soundToggle.addEventListener('click', () => {
+        soundEnabled = !soundEnabled
+        soundToggle.setAttribute('aria-pressed', String(!soundEnabled))
+        soundToggleLabel.textContent = soundEnabled ? 'Sound On' : 'Sound Off'
+        localStorage.setItem('alec-sound', soundEnabled ? 'on' : 'off')
+    })
 }

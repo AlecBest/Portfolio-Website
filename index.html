@@ -4,230 +4,449 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alec Best | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <main id="character-sheet">
+    <button class="sound-toggle game-btn secondary" id="sound-toggle" type="button"  aria-pressed="false">
+        <span id="sound-toggle-label">Sound On</span>
+    </button>  
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+        <img src="Assets/images/M1010.png" alt="" class="theme-toggle-icon" />
+    </button>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="nameplate">
+                <span class="nameplate-text">Alec Best</span>
+            </div>
 
-        <div class="journal-nameplate">
-            <span>Alec Best</span>
-        </div>
+            <nav class="top-nav">
+                <a href="#profile" class="game-btn secondary active">
+                    <img src="Assets/images/UI_TravelBook_ButtonAbout01a.png" alt="" class="btn-icon" />
+                    <span>Profile</span>
+                </a>
 
-        <div class="book-layout-wrapper">
-            <div class="book-stage">
+                <a href="#projects" class="game-btn secondary">
+                    <img src="Assets/images/UI_TravelBook_IconJournal01b.png" alt="" class="btn-icon" />
+                    <span>Projects</span>
+                </a>
 
-                <nav class="book-top-tabs">
-                    <a class="top-tab active" href="index.html">
-                        <img src="Assets/images/UI_TravelBook_ButtonAbout01a.png" alt="" />
-                        <span>Profile</span>
-                    </a>
+                <a href="#resume" class="game-btn secondary">
+                    <img src="Assets/images/UI_TravelBook_ButtonManual01a.png" alt="" class="btn-icon" />
+                    <span>Resume</span>
+                </a>
 
-                    <a class="top-tab" href="projects.html">
-                        <img src="Assets/images/UI_TravelBook_IconJournal01b.png" alt="" />
-                        <span>Projects</span>
-                    </a>
+                <a href="#contact" class="game-btn secondary">
+                    <img src="Assets/images/UI_TravelBook_ButtonContact01a.png" alt="" class="btn-icon" />
+                    <span>Contact</span>
+                </a>
+            </nav>
+        </header>
 
-                    <a class="top-tab" href="resume.html">
-                        <img src="Assets/images/UI_TravelBook_ButtonManual01a.png" alt="" />
-                        <span>Resume</span>
-                    </a>
+        <main class="profile-container" id="profile">
+            <div class="hero-grid">
+                <aside class="hero-left">
+                    <div class="portrait-frame">
+                        <img src="Assets/images/LinkedInProfilePicture.png" alt="Portrait of Alec Best" />
+                    </div>
 
-                    <a class="top-tab" href="contact.html">
-                        <img src="Assets/images/UI_TravelBook_ButtonContact01a.png" alt="" />
-                        <span>Contact</span>
-                    </a>
-                </nav>
+                    <div class="identity-block">
+                        <h1>Alec Best</h1>
+                        <p class="role">Aspiring Developer | Level 22</p>
+                        <p class="location">London, Ontario</p>
+                    </div>
 
-                <section class="book-cover">
-                    <div class="book-pages-wrapper">
-                        <section class="book-page left-page">
-                            <div class="avatar-stats-container">
-                                <div class="avatar-box">
-                                    <img src="Assets/images/LinkedInProfilePicture.png" alt="Profile picture of Alec Best" />
-                                </div>
+                    <div class="info-card">
+                        <h2>Current Status</h2>
 
-                                <div class="stats-box">
-                                    <h2 class="char-name">Alec Best</h2>
-                                    <p><strong>Class:</strong> Aspiring Developer</p>
-                                    <p><strong>Level:</strong> 22</p>
-                                    <p><strong>Location:</strong> London, Ontario</p>
-                                </div>
+                        <div class="quick-stats">
+                            <div class="stat-row">
+                                <span class="stat-label">Focus</span>
+                                <span class="stat-value">Building Projects</span>
                             </div>
 
-                            <section class="about-me-box">
-                                <h3>About Me</h3>
+                            <div class="stat-row">
+                                <span class="stat-label">Goal</span>
+                                <span class="stat-value">Internship / Entry-Level Role</span>
+                            </div>
 
-                                <p>
-                                    I'm a Computer Science student at Western University, currently in my third year pursuing an Honors Specialization in Computer Science with a minor in Game Development. I'm originally from St. Vincent and the Grenadines, a small island nation in the Caribbean.
-                                </p>
+                            <div class="stat-row">
+                                <span class="stat-label">Class</span>
+                                <span class="stat-value">Software + Game Dev</span>
+                            </div>
+                        </div>
+                    </div>
 
-                                <p>
-                                    I've been fascinated by computers from a young age and even built my first PC when I was 13. Over time, that interest grew into a passion for software and games. I enjoy creating projects that blend logic, creativity, and design, and my long-term dream is to work in game development and eventually build a massive MMORPG of my own.
-                                </p>
-                            </section>
+                    <div class="action-group">
+                        <a href="AlecOBest-Resume2026.pdf" download class="game-btn primary">Download Resume</a>
 
-                            <section class="profile-extra-box">
-                                <h3>Interests</h3>
+                        <div class="action-row">
+                            <a href="https://github.com/AlecBest" target="_blank" rel="noopener noreferrer" class="game-btn secondary">GitHub</a>
+                            <a href="https://www.linkedin.com/in/alec-best-6159b63b4" target="_blank" rel="noopener noreferrer" class="game-btn secondary">LinkedIn</a>
+                        </div>
+                    </div>
+                </aside>
 
-                                <ul class="interest-list">
-                                    <li>Game Development</li>
-                                    <li>Software Engineering</li>
-                                    <li>Frontend Design</li>
-                                    <li>Visual Effects</li>
-                                    <li>Fast-Paced Action Games</li>
+                <div class="hero-right">
+                    <section class="content-section">
+                        <p class="section-kicker">Profile</p>
+                        <h2>About Me</h2>
+
+                        <p>
+                            I’m a Computer Science student at Western University, currently in my third year pursuing an Honors Specialization in Computer Science with a minor in Game Development. I’m originally from St. Vincent and the Grenadines, a small island nation in the Caribbean.
+                        </p>
+
+                        <p>
+                            I enjoy building projects that combine logic, creativity, and interactive design. My long term goal is to grow into a developer who can build polished software and eventually larger scale games of my own.
+                        </p>
+                    </section>
+
+                    <section class="content-section">
+                        <p class="section-kicker">Capabilities</p>
+                        <h2>Skills & Interests</h2>
+
+                        <div class="skills-groups">
+                            <div class="skill-group">
+                                <h3>Languages</h3>
+
+                                <ul class="chip-list">
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                    <li>JavaScript</li>
+                                    <li>C++</li>
+                                    <li>C#</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
                                 </ul>
-                            </section>
+                            </div>
 
-                            <section class="status-box">
-                                <h3>Current Status</h3>
+                            <div class="skill-group">
+                                <h3>Currently Learning</h3>
 
-                                <div class="status-line">
-                                    <span class="status-label">Focus</span>
-                                    <span class="status-value">Building Projects</span>
+                                <ul class="chip-list">
+                                    <li>Unity</li>
+                                    <li>Unreal Engine</li>
+                                    <li>Frontend Dev</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section section-divider" id="projects">
+                        <p class="section-kicker">Quest Log</p>
+                        <h2>Projects</h2>
+
+                        <div class="project-grid">
+                            <article class="project-card">
+                                <div class="project-top">
+                                    <span class="project-tag done">Completed</span>
+                                    <h3>Portfolio Website</h3>
                                 </div>
 
-                                <div class="status-line">
-                                    <span class="status-label">Goal</span>
-                                    <span class="status-value">Internship / Entry-Level Role</span>
+                                <p>
+                                    A personal portfolio site with a game-inspired identity, designed to showcase my work in a cleaner and more memorable format.
+                                </p>
+
+                                <p class="project-stack">HTML · CSS · JavaScript</p>
+
+                                <button type="button" class="window-open-btn" data-window="window-portfolio">
+                                    Open Project Window
+                                </button>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-top">
+                                    <span class="project-tag progress">In Progress</span>
+                                    <h3>Penguin Platformer</h3>
                                 </div>
 
-                                <div class="status-line">
-                                    <span class="status-label">Specialization</span>
-                                    <span class="status-value">Software + Game Dev</span>
-                                </div>
-                            </section>
+                                <p>
+                                    A cute platformer concept centered around a sword-wielding penguin sticker with movement, light combat, and playful visual design.
+                                </p>
 
-                        </section>
+                                <p class="project-stack">Unity · C#</p>
 
-                        <section class="book-page right-page">
-                            <section class="skills-box">
-                                <h3>Skills</h3>
+                                <button type="button" class="window-open-btn" data-window="window-penguin">
+                                    Open Project Window
+                                </button>
+                            </article>
 
-                                <div class="skill-group">
-                                    <h4>Languages</h4>
-                                    <ul class="skill-chip-list">
-                                        <li>Python</li>
-                                        <li>Java</li>
-                                        <li>JavaScript</li>
-                                        <li>C++</li>
-                                        <li>C#</li>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                    </ul>
+                            <article class="project-card">
+                                <div class="project-top">
+                                    <span class="project-tag planning">Planning</span>
+                                    <h3>2D Game Engine</h3>
                                 </div>
 
-                                <div class="skill-group">
-                                    <h4>Currently Learning</h4>
-                                    <ul class="skill-chip-list">
-                                        <li>Unity</li>
-                                        <li>Unreal Engine</li>
-                                        <li>Advanced Frontend Development</li>
-                                    </ul>
-                                </div>
-                            </section>
+                                <p>
+                                    A future engine-focused project aimed at strengthening my understanding of systems, architecture, and game foundations.
+                                </p>
 
-                            <section class="inventory-section">
-                                <h3>Education</h3>
+                                <p class="project-stack">C++ · Engine Architecture</p>
+
+                                <button type="button" class="window-open-btn" data-window="window-engine">
+                                    Open Project Window
+                                </button>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="content-section section-divider" id="resume">
+                        <p class="section-kicker">Background</p>
+                        <h2>Education & Resume</h2>
+
+                        <div class="education-grid">
+                            <div class="info-card">
+                                <h3>Education Inventory</h3>
 
                                 <div class="inventory-grid">
-                                    <button class="inventory-slot filled" type="button" data-popup="bsc-popup">
-                                        <span class="slot-icon">🎓</span>
+                                    <button class="inventory-slot filled" type="button" data-window="window-bsc">
+                                        <img src="Assets/images/pixel-art-graduation-cap-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" alt="" class="slot-image" />
                                         <span class="slot-label">BSc CS</span>
                                     </button>
 
-                                    <button class="inventory-slot filled" type="button" data-popup="cape-popup">
-                                        <span class="slot-icon">📜</span>
+                                    <button class="inventory-slot filled" type="button" data-window="window-cape">
+                                        <img src="Assets/images/SCROLL_PIXEL.png" alt="" class="slot-image" />
                                         <span class="slot-label">CAPE</span>
                                     </button>
 
                                     <div class="inventory-slot empty"></div>
                                     <div class="inventory-slot empty"></div>
-                                    <div class="inventory-slot empty"></div>
-                                    <div class="inventory-slot empty"></div>
-                                    <div class="inventory-slot empty"></div>
-                                    <div class="inventory-slot empty"></div>
                                 </div>
-                            </section>
+                            </div>
 
-                        </section>
+                            <div class="info-card">
+                                <h3>Resume Snapshot</h3>
 
+                                <div class="resume-points">
+                                    <div class="resume-point">
+                                        <span class="resume-label">School</span>
+                                        <span class="resume-value">Western University</span>
+                                    </div>
+
+                                    <div class="resume-point">
+                                        <span class="resume-label">Program</span>
+                                        <span class="resume-value">Honors Specialization in Computer Science</span>
+                                    </div>
+
+                                    <div class="resume-point">
+                                        <span class="resume-label">Minor</span>
+                                        <span class="resume-value">Game Development</span>
+                                    </div>
+
+                                    <div class="resume-point">
+                                        <span class="resume-label">Status</span>
+                                        <span class="resume-value">Third Year</span>
+                                    </div>
+                                </div>
+
+                                <div class="resume-actions">
+                                    <a href="AlecOBest-Resume2026.pdf" download class="game-btn primary">Download Resume</a>
+                                    <a href="AlecOBest-Resume2026.pdf" target="_blank" rel="noopener noreferrer" class="game-btn secondary">Open Resume</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section section-divider" id="contact">
+                        <p class="section-kicker">Contact</p>
+                        <h2>Let’s Connect</h2>
+
+                        <div class="contact-card">
+                            <p>
+                                I’m currently building my portfolio and looking for opportunities to keep improving as a developer. Feel free to reach out, connect, or check out my work.
+                            </p>
+
+                            <div class="contact-actions">
+                                <a href="mailto:alecbest03@gmail.com" class="game-btn primary">Email Me</a>
+                                <a href="https://github.com/AlecBest" target="_blank" rel="noopener noreferrer" class="game-btn secondary">GitHub</a>
+                                <a href="https://www.linkedin.com/in/alec-best-6159b63b4" target="_blank" rel="noopener noreferrer" class="game-btn secondary">LinkedIn</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 Alec Best</p>
+        </footer>
+    </div>
+
+    <div class="window-overlay hidden" id="window-overlay">
+        <div class="desktop-window hidden" id="window-portfolio">
+            <div class="window-bar">
+                <span>portfolio_website.exe</span>
+
+                <button class="window-close" type="button" aria-label="Close window">
+                    <img src="Assets/images/UI_TravelBook_ButtonCross01a.png" alt="" class="window-close-icon" />
+                </button>
+            </div>
+
+            <div class="window-body">
+                <div class="window-gallery">
+                    <div class="window-shot">Homepage Layout</div>
+                    <div class="window-shot">Profile Panel</div>
+                    <div class="window-shot wide">Project Window System</div>
+                </div>
+
+                <div class="window-content">
+                    <p class="window-kicker">Project File</p>
+                    <h3>Portfolio Website</h3>
+
+                    <p>
+                        This project is focused on presenting my work with a cleaner and more polished layout while still keeping a game-inspired identity.
+                    </p>
+
+                    <p>
+                        The site uses strong hierarchy, structured cards, interactive project windows, and a themed UI layer without sacrificing readability.
+                    </p>
+
+                    <div class="window-meta">
+                        <div class="window-meta-row">
+                            <span class="window-meta-label">Stack</span>
+                            <span class="window-meta-value">HTML, CSS, JavaScript</span>
+                        </div>
+
+                        <div class="window-meta-row">
+                            <span class="window-meta-label">Status</span>
+                            <span class="window-meta-value">Active</span>
+                        </div>
                     </div>
-                </section>
-
-                <aside class="planned-projects-panel">
-                    <h3>Planned Projects</h3>
-
-                    <ul class="planned-project-list">
-                        <li class="planned-project done">
-                            <span class="project-check">☑</span>
-                            <span>Finish Portfolio Website</span>
-                        </li>
-
-                        <li class="planned-project">
-                            <span class="project-check">☐</span>
-                            <span>2D Platform Game Engine</span>
-                        </li>
-
-                        <li class="planned-project">
-                            <span class="project-check">☐</span>
-                            <span>Unity Penguin Picture Book Game</span>
-                        </li>
-                    </ul>
-                </aside>
-
+                </div>
             </div>
         </div>
 
-        <section class="action-buttons">
-            <a href="AlecOBest-Resume2026.pdf" download="AlecOBest-Resume2026.pdf" class="rpg-btn">
-                <span>Download Resume</span>
-            </a>
+        <div class="desktop-window hidden" id="window-penguin">
+            <div class="window-bar">
+                <span>penguin_platformer.unity</span>
 
-            <a href="https://github.com/AlecBest" target="_blank" rel="noopener noreferrer" class="rpg-btn">
-                <span>GitHub</span>
-            </a>
+                <button class="window-close" type="button" aria-label="Close window">
+                    <img src="Assets/images/UI_TravelBook_ButtonCross01a.png" alt="" class="window-close-icon" />
+                </button>
+            </div>
 
-            <a href="https://www.linkedin.com/in/alec-best-6159b63b4" target="_blank" rel="noopener noreferrer" class="rpg-btn">
-                <span>LinkedIn</span>
-            </a>
+            <div class="window-body">
+                <div class="window-gallery">
+                    <div class="window-shot">Movement</div>
+                    <div class="window-shot">Combat</div>
+                    <div class="window-shot wide">Sticker Book Theme</div>
+                </div>
 
-            <a href="projects.html" class="rpg-btn">
-                <span>View Projects</span>
-            </a>
-        </section>
+                <div class="window-content">
+                    <p class="window-kicker">Project File</p>
+                    <h3>Penguin Platformer</h3>
 
-    </main>
+                    <p>
+                        A cute platformer concept built around a sword-wielding penguin sticker. The project combines platforming, light combat, and playful presentation ideas.
+                    </p>
 
-    <div class="popup-overlay hidden" id="popup-overlay">
+                    <p>
+                        This is one of the projects I want to keep developing because it reflects both my interest in games and my desire to build something visually distinct.
+                    </p>
 
-        <div class="popup-card hidden" id="bsc-popup">
-            <button class="close-popup" type="button">×</button>
-            <h3>Bachelor of Science in Computer Science</h3>
-            <p><strong>School:</strong> Western University</p>
-            <p><strong>Program:</strong> Honors Specialization in Computer Science</p>
-            <p><strong>Minor:</strong> Game Development</p>
-            <p><strong>Status:</strong> In Progress</p>
-            <p>
-                Focused on software development, programming, problem solving, and building technical projects through coursework and personal development.
-            </p>
+                    <div class="window-meta">
+                        <div class="window-meta-row">
+                            <span class="window-meta-label">Stack</span>
+                            <span class="window-meta-value">Unity, C#</span>
+                        </div>
+
+                        <div class="window-meta-row">
+                            <span class="window-meta-label">Status</span>
+                            <span class="window-meta-value">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="popup-card hidden" id="cape-popup">
-            <button class="close-popup" type="button">×</button>
-            <h3>CAPE Examinations</h3>
-            <p><strong>Qualification:</strong> Caribbean Advanced Proficiency Examination</p>
-            <p><strong>Location:</strong> St. Vincent and the Grenadines</p>
-            <p><strong>Focus:</strong> Pre-university academic foundation</p>
-            <p>
-                Completed advanced secondary-level studies that helped prepare me for university-level computer science and analytical coursework.
-            </p>
+        <div class="desktop-window hidden" id="window-engine">
+            <div class="window-bar">
+                <span>engine_notes.cpp</span>
+
+                <button class="window-close" type="button" aria-label="Close window">
+                    <img src="Assets/images/UI_TravelBook_ButtonCross01a.png" alt="" class="window-close-icon" />
+                </button>
+            </div>
+
+            <div class="window-body">
+                <div class="window-gallery">
+                    <div class="window-shot">Systems</div>
+                    <div class="window-shot">Architecture</div>
+                    <div class="window-shot wide">Technical Foundations</div>
+                </div>
+
+                <div class="window-content">
+                    <p class="window-kicker">Project File</p>
+                    <h3>2D Game Engine</h3>
+
+                    <p>
+                        This planned project is meant to push my understanding of engine structure, reusable systems, and how game logic is organized under the hood.
+                    </p>
+
+                    <p>
+                        It is less about making something flashy immediately and more about strengthening my technical foundations.
+                    </p>
+
+                    <div class="window-meta">
+                        <div class="window-meta-row">
+                            <span class="window-meta-label">Stack</span>
+                            <span class="window-meta-value">C++, Architecture</span>
+                        </div>
+
+                        <div class="window-meta-row">
+                            <span class="window-meta-label">Status</span>
+                            <span class="window-meta-value">Planned</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <div class="desktop-window hidden small-window" id="window-bsc">
+            <div class="window-bar">
+                <span>education_bsc.txt</span>
+
+                <button class="window-close" type="button" aria-label="Close window">
+                    <img src="Assets/images/UI_TravelBook_ButtonCross01a.png" alt="" class="window-close-icon" />
+                </button>
+            </div>
+
+            <div class="window-body single-column">
+                <div class="window-content">
+                    <p class="window-kicker">Education Record</p>
+                    <h3>BSc in Computer Science</h3>
+                    <p><strong>School:</strong> Western University</p>
+                    <p><strong>Program:</strong> Honors Specialization in Computer Science</p>
+                    <p><strong>Minor:</strong> Game Development</p>
+                    <p><strong>Status:</strong> In Progress</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="desktop-window hidden small-window" id="window-cape">
+            <div class="window-bar">
+                <span>education_cape.txt</span>
+
+                <button class="window-close" type="button" aria-label="Close window">
+                    <img src="Assets/images/UI_TravelBook_ButtonCross01a.png" alt="" class="window-close-icon" />
+                </button>
+            </div>
+
+            <div class="window-body single-column">
+                <div class="window-content">
+                    <p class="window-kicker">Education Record</p>
+                    <h3>CAPE Examinations</h3>
+                    <p><strong>Location:</strong> St. Vincent and the Grenadines</p>
+                    <p><strong>Focus:</strong> Pre-university academic foundation</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="custom-cursor" aria-hidden="true">
-        <img src="Assets/images/UI_TravelBook_Cursor01c.png" alt="" />
-    </div>
+    <audio id="click-sound" preload="auto" src="Assets/sound/Mouse Click 1.mp3"></audio>
+    <audio id="close-sound" preload="auto" src="Assets/sound/WaterDrop.wav"></audio>
 
     <script src="script.js"></script>
 </body>
