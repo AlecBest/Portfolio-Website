@@ -109,3 +109,62 @@ if (soundToggle && soundToggleLabel) {
         localStorage.setItem('alec-sound', soundEnabled ? 'on' : 'off')
     })
 }
+
+/*document.querySelectorAll('.shot-flip-card').forEach(card => {
+    card.addEventListener('click', event => {
+        event.stopPropagation()
+        const shot = card.closest('.window-shot')
+        if (!shot) return
+        shot.classList.toggle('is-flipped')
+        playSound(clickSound)
+    })
+}) */
+
+const lightbox = document.getElementById('image-lightbox')
+const lightboxImg = document.getElementById('image-lightbox-img')
+const lightboxCaption = document.getElementById('image-lightbox-caption')
+const lightboxClose = document.getElementById('image-lightbox-close')
+
+document.querySelectorAll('.window-shot-image img').forEach(img => {
+    img.addEventListener('click', event => {
+        event.stopPropagation()
+        if (!lightbox || !lightboxImg || !lightboxCaption) return
+
+        lightboxImg.src = img.src
+        lightboxImg.alt = img.alt
+
+        const label = img.closest('.shot-front')?.querySelector('.window-shot-label')?.textContent?.trim()
+        lightboxCaption.textContent = label || img.alt || ''
+
+        lightbox.classList.remove('hidden')
+        document.body.classList.add('no-scroll')
+        playSound(clickSound)
+    })
+})
+
+function closeLightbox() {
+    if (!lightbox) return
+    lightbox.classList.add('hidden')
+    lightboxImg.src = ''
+    lightboxCaption.textContent = ''
+    document.body.classList.remove('no-scroll')
+    playSound(closeSound)
+}
+
+if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox)
+}
+
+if (lightbox) {
+    lightbox.addEventListener('click', event => {
+        if (event.target === lightbox) {
+            closeLightbox()
+        }
+    })
+}
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && lightbox && !lightbox.classList.contains('hidden')) {
+        closeLightbox()
+    }
+})

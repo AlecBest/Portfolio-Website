@@ -158,6 +158,22 @@
 
                             <article class="project-card">
                                 <div class="project-top">
+                                    <span class="project-tag done">Completed</span>
+                                    <h3>2D Escape Room Game</h3>
+                                </div>
+                                <p>
+                                    A 2D point-and-click escape room project built around exploration, interaction, puzzle solving, and scene-based progression.
+                                </p>
+
+                                <p class="project-stack">Java · JavaFX · Team Project</p>
+
+                                <button type="button" class="window-open-btn" data-window="window-escape-room">
+                                    Open Project Window
+                                </button>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-top">
                                     <span class="project-tag progress">In Progress</span>
                                     <h3>Penguin Platformer</h3>
                                 </div>
@@ -286,9 +302,68 @@
 
             <div class="window-body">
                 <div class="window-gallery">
-                    <div class="window-shot">Homepage Layout</div>
-                    <div class="window-shot">Profile Panel</div>
-                    <div class="window-shot wide">Project Window System</div>
+                    <div class="window-shot">
+                        <button class="shot-flip-card" type="button" aria-label="Flip card">
+                            <div class="shot-flip-inner">
+                                <div class="shot-face shot-front">
+                                    <div class="window-shot-image">
+                                        <img src="Assets/images/homePage.png" alt="Homepage Layout">
+                                    </div>
+                                    <span class="window-shot-label">Homepage Layout</span>
+                                </div>
+
+                                <div class="shot-face shot-back">
+                                    <h4>Homepage Layout</h4>
+                                    <p>
+                                    This shows the main landing page layout with the game-inspired header,
+                                    profile section, and structured card design used throughout the site.
+                                    </p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="window-shot">
+                        <button class="shot-flip-card" type="button" aria-label="Flip card">
+                            <div class="shot-flip-inner">
+                                <div class="shot-face shot-front">
+                                    <div class="window-shot-image">
+                                        <img src="Assets/images/profilePage.png" alt="Profile Page Layout">
+                                    </div>
+                                    <span class="window-shot-label">Profile Page Layout</span>
+                                </div>
+
+                                <div class="shot-face shot-back">
+                                    <h4>Profile Page Layout</h4>
+                                    <p>
+                                    This shows the profile page layout with the game-inspired header,
+                                    profile section, and structured card design used throughout the site.
+                                    </p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="window-shot wide">
+                        <button class="shot-flip-card" type="button" aria-label="Flip card">
+                            <div class="shot-flip-inner">
+                                <div class="shot-face shot-front">
+                                    <div class="window-shot-image">
+                                        <img src="Assets/images/popUpPage.png" alt="Pop-Up Page Layout">
+                                    </div>
+                                    <span class="window-shot-label">Pop-Up Page Layout</span>
+                                </div>
+
+                                <div class="shot-face shot-back">
+                                    <h4>Pop-Up Page Layout</h4>
+                                    <p>
+                                    This shows the pop-up page layout with the game-inspired header,
+                                    profile section, and structured card design used throughout the site.
+                                    </p>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="window-content">
@@ -329,9 +404,26 @@
 
             <div class="window-body">
                 <div class="window-gallery">
-                    <div class="window-shot">Movement</div>
-                    <div class="window-shot">Combat</div>
-                    <div class="window-shot wide">Sticker Book Theme</div>
+                    <div class="window-shot placeholder-shot">
+                        <div class="placeholder-panel">
+                            <span class="placeholder-title">UNDER CONSTRUCTION</span>
+                            <span class="placeholder-note">Movement screenshot coming soon.</span>
+                        </div>
+                    </div>
+
+                    <div class="window-shot placeholder-shot">
+                        <div class="placeholder-panel">
+                            <span class="placeholder-title">UNDER CONSTRUCTION</span>
+                            <span class="placeholder-note">Combat screenshot coming soon.</span>
+                        </div>
+                    </div>
+
+                    <div class="window-shot wide placeholder-shot">
+                        <div class="placeholder-panel">
+                            <span class="placeholder-title">UNDER CONSTRUCTION</span>
+                            <span class="placeholder-note">Sticker book theme showcase coming soon.</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="window-content">
@@ -372,9 +464,26 @@
 
             <div class="window-body">
                 <div class="window-gallery">
-                    <div class="window-shot">Systems</div>
-                    <div class="window-shot">Architecture</div>
-                    <div class="window-shot wide">Technical Foundations</div>
+                    <div class="window-shot placeholder-shot">
+                        <div class="placeholder-panel">
+                            <span class="placeholder-title">UNDER CONSTRUCTION</span>
+                            <span class="placeholder-note">Systems screenshot coming soon.</span>
+                        </div>
+                    </div>
+
+                    <div class="window-shot placeholder-shot">
+                        <div class="placeholder-panel">
+                            <span class="placeholder-title">UNDER CONSTRUCTION</span>
+                            <span class="placeholder-note">Architecture screenshot coming soon.</span>
+                        </div>
+                    </div>
+
+                    <div class="window-shot wide placeholder-shot">
+                        <div class="placeholder-panel">
+                            <span class="placeholder-title">UNDER CONSTRUCTION</span>
+                            <span class="placeholder-note">Technical foundations showcase coming soon.</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="window-content">
@@ -398,6 +507,84 @@
                         <div class="window-meta-row">
                             <span class="window-meta-label">Status</span>
                             <span class="window-meta-value">Planned</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="desktop-window hidden" id="window-escape-room">
+            <div class="window-bar">
+                <span>2d_escape_room.java</span>
+
+                <button class="window-close" type="button" aria-label="Close window">
+                    <img src="Assets/images/UI_TravelBook_ButtonCross01a.png" alt="" class="window-close-icon" />
+                </button>
+            </div>
+
+            <div class="window-body">
+                <div class="window-gallery">
+                    <div class="window-shot">
+                        <div class="shot-flip-card static-shot-card" aria-label="Escape room screenshot slot">
+                            <div class="shot-flip-inner">
+                                <div class="shot-face shot-front">
+                                    <div class="window-shot-image">
+                                        <img src="Assets/images/gameLayout.png" alt="Escape Room Screenshot 1">
+                                    </div>
+                                    <span class="window-shot-label">Escape Room | Home scene</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="window-shot">
+                        <div class="shot-flip-card static-shot-card" aria-label="Escape room screenshot slot">
+                            <div class="shot-flip-inner">
+                                <div class="shot-face shot-front">
+                                    <div class="window-shot-image">
+                                        <img src="Assets/images/dialogue.png" alt="Escape Room Screenshot 2">
+                                    </div>
+                                    <span class="window-shot-label">Dialogue UI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="window-shot wide">
+                        <div class="shot-flip-card static-shot-card" aria-label="Escape room screenshot slot">
+                            <div class="shot-flip-inner">
+                                <div class="shot-face shot-front">
+                                    <div class="window-shot-image">
+                                        <img src="Assets/images/inventory.png" alt="Escape Room Screenshot 3">
+                                    </div>
+                                    <span class="window-shot-label">Inventory UI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="window-content">
+                    <p class="window-kicker">Project File</p>
+                    <h3>2D Point-and-Click Escape Room</h3>
+
+                    <p>
+                        This completed project is a 2D point-and-click escape room built around exploration, interaction, puzzle solving, and scene-based progression.
+                    </p>
+
+                    <p>
+                        This was a team project where I contributed to much of the core systems like inventory management, scene transitions, and puzzle logic while also working on implementation and UI.
+                    </p>
+
+                    <div class="window-meta">
+                        <div class="window-meta-row">
+                            <span class="window-meta-label">Stack</span>
+                            <span class="window-meta-value">Java, JavaFX, Team Project</span>
+                        </div>
+
+                        <div class="window-meta-row">
+                            <span class="window-meta-label">Status</span>
+                            <span class="window-meta-value">Completed</span>
                         </div>
                     </div>
                 </div>
@@ -443,6 +630,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="image-lightbox hidden" id="image-lightbox">
+        <button class="image-lightbox-close" id="image-lightbox-close" type="button" aria-label="Close image preview">✕</button>
+        <img id="image-lightbox-img" src="" alt="">
+        <p class="image-lightbox-caption" id="image-lightbox-caption"></p>
     </div>
 
     <audio id="click-sound" preload="auto" src="Assets/sound/Mouse Click 1.mp3"></audio>
