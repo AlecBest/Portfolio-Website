@@ -763,6 +763,7 @@ body.dark-mode .window-overlay {
 @media (max-width: 560px) {
     .page-shell {
         padding: 22px 14px 36px;
+        position: relative;
     }
 
     .theme-toggle {
@@ -816,13 +817,83 @@ body.dark-mode .window-overlay {
 
     .window-overlay {
         padding: 12px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .desktop-window,
+    .small-window {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 18px;
+        max-height: calc(100vh - 20px);
+        overflow: hidden;
+    }
+
+    .window-bar {
+        min-height: 44px;
+        padding: 8px 10px;
+        font-size: 0.82rem;
+    }
+
+    .window-close {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+    }
+
+    .window-close-icon {
+        width: 14px;
+        height: 14px;
     }
 
     .window-body {
-        padding: 16px;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 12px;
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
     }
 
     .window-shot {
-        min-height: 130px;
+        min-height: 100px;
+    }
+
+    window-shot.wide {
+        min-height: 120px;
+    }
+
+    .window-content h3 {
+        font-size: 1.35rem;
+    }
+
+    .window-content p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+     .sound-toggle,
+    .theme-toggle {
+        position: absolute;
+        top: 10px;
+        z-index: 20;
+    }
+
+    .sound-toggle {
+        left: 10px;
+        min-height: 34px;
+        padding: 6px 10px;
+        font-size: 0.78rem;
+    }
+
+    .theme-toggle {
+        right: 10px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .theme-toggle-icon {
+        width: 36px;
+        height: 36px;
     }
 }
